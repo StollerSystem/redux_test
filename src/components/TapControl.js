@@ -8,7 +8,7 @@ class TapControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterTapList: [{name: "Pilsner", brand: "Breakside", price: 4, alcoholContent: 4.5, quantity: 124, id:10001 }],
+      masterTapList: [{name: "Pilsner", brand: "Breakside", price: 4, alcoholContent: 4.5, quantity: 5, id:10001 }],
       formVisibleOnPage: false,
       selectedKeg: null,
       editing: false
@@ -46,7 +46,9 @@ class TapControl extends React.Component {
     const newMasterTapList = this.state.masterTapList;
     for (const keg of newMasterTapList) {
       if (keg.id === id) {
-        keg.quantity -= 1;
+        if (keg.quantity > 0) {
+          keg.quantity -= 1;
+        }
         break;
       }
     }
