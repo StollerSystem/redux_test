@@ -6,7 +6,7 @@ class TapControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterTapList: [],
+      masterTapList: [{name: "Pilsner", brand: "Breakside", price: 4, alcoholContent: 4.5 }],
       formVisibleOnPage: false,
       selectedProduct: null
     }
@@ -17,7 +17,8 @@ class TapControl extends React.Component {
     // let buttonText = null;
 
 
-    currentVisibleState = <TapList/>
+    currentVisibleState = <TapList 
+      availableKegs={this.state.masterTapList}/>
 
     return (
       <React.Fragment>
