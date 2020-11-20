@@ -6,8 +6,10 @@ import TapControl from "./TapControl";
 function App(){
   return ( 
     <React.Fragment>
-      <Header />
-      <TapControl />      
+      <div className="container">
+        <Header />
+        <TapControl />   
+      </div>
     </React.Fragment>
   );
 }

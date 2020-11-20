@@ -1,13 +1,23 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  
+  font-family: 'Germania One', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://blog-assets.busbud.com/wp-content/uploads/2019/11/Sunnylvsfjorden-fjord-canyon.png");
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header,h1 {
+  text-align: center;
+  font-size: 300%;
+  
+}
+
+

@@ -5,8 +5,8 @@ function Header() {
   return (    
     <React.Fragment>
       <br/><br/>
-      <div className="container">
-      <h1>VIKING SHIP TAP ROOM</h1>
+      <div className="container header">
+        <h1>VIKING SHIP TAP ROOM</h1>
       </div>
     </React.Fragment>
   );
