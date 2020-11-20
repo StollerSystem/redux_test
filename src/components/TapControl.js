@@ -68,18 +68,15 @@ class TapControl extends React.Component {
       editing: false,
       selectedKeg: null
     });
-}
+  }
 
-handleDeletingTicket = (id) => {
-  const newMasterTapList = this.state.masterTapList.filter(Tap => Tap.id !== id);
-  this.setState({
-    masterTapList: newMasterTapList,
-    selectedTicket: null
-  });
-}
-
-
-
+  handleDeletingKeg = (id) => {
+    const newMasterTapList = this.state.masterTapList.filter(Tap => Tap.id !== id);
+    this.setState({
+      masterTapList: newMasterTapList,
+      selectedKeg: null
+    });
+  }
 
 
   render() {
@@ -95,7 +92,7 @@ handleDeletingTicket = (id) => {
     else if (this.state.selectedKeg != null) {
       currentVisibleState = <KegDetail 
       keg = {this.state.selectedKeg} 
-      onClickingDelete = {this.handleDeletingProduct}
+      onClickingDelete = {this.handleDeletingKeg}
       onClickingEdit = {this.handleEditClick} 
       />
       buttonText = "Return to Tap List";
