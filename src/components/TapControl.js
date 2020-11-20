@@ -2,6 +2,7 @@ import React from 'react';
 import TapList from "./TapList.js"
 import NewKegForm from "./NewKegForm.js"
 import KegDetail from "./KegDetails.js"
+import EditKegForm from "./EditKegForm.js"
 
 
 class TapControl extends React.Component {
@@ -56,6 +57,21 @@ class TapControl extends React.Component {
       masterTapList: newMasterTapList,
       formVisibleOnPage: false });
   }
+
+  handleEditClick = () => {
+    console.log("handleEditClick reached!");
+    this.setState({editing: true});
+  }
+
+  handleEditingKegInList = (productToEdit) => {
+    
+    // this.setState({
+    //   masterProductList: clone,
+    //   editing: false,
+    //   selectedProduct: null
+    // });
+  }
+
   
 
 
@@ -69,11 +85,16 @@ class TapControl extends React.Component {
     let buttonText = null;
 
 
-    if (this.state.selectedKeg != null) {
+    if (this.state.editing){
+      currentVisibleState = <EditKegForm product = {this.state.selectedKeg} onEditProduct = {this.handleEditingKegInList} />
+      buttonText = "Return to Tap List";
+    }
+
+    else if (this.state.selectedKeg != null) {
       currentVisibleState = <KegDetail 
       keg = {this.state.selectedKeg} 
       // onClickingDelete = {this.handleDeletingProduct}
-      // onClickingEdit = {this.handleEditClick} 
+      onClickingEdit = {this.handleEditClick} 
       />
       buttonText = "Return to Tap List";
     }

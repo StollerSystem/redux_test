@@ -14,8 +14,8 @@ function KegDetail(props){
       <p>Alcohol Content: {keg.alcoholContent} %ABU</p>
       <p>Quantity: {keg.quantity}</p>
       
-      {/* <button className="btn btn-outline-danger btn-block" onClick={() => onClickingDelete(product.id) }>Delete This Part</button>
-      <button className="btn btn-outline-light btn-block" onClick={ props.onClickingEdit }>Edit This Part</button> */}
+      {/* <button className="btn btn-outline-danger btn-block" onClick={() => onClickingDelete(product.id) }>Delete This Part</button> */}
+      <button className="btn btn-outline-light btn-block" onClick={ props.onClickingEdit }>Edit This Part</button>
 
       <hr/>
     </React.Fragment>
@@ -23,9 +23,9 @@ function KegDetail(props){
 }
 
 KegDetail.propTypes = {
-  keg: PropTypes.object
+  keg: PropTypes.object,
+  onClickingEdit: PropTypes.func
   // onClickingDelete: PropTypes.func,
-  // onClickingEdit: PropTypes.func
 }
 
 export default KegDetail;
