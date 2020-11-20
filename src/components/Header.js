@@ -6,7 +6,7 @@ function Header() {
     <React.Fragment>
       <br/><br/>
       <div className="container header">
-        <h1>VIKING SHIP TAP ROOM</h1>
+        <h1>VIKING SHIP TAP HALL</h1>
       </div>
     </React.Fragment>
   );

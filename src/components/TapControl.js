@@ -9,7 +9,7 @@ class TapControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterTapList: [{name: "Pilsner", brand: "Breakside", price: "4.50", alcoholContent: "4.5", quantity: 5, id:"10001" }],
+      masterTapList: [{name: "Pilsner", brand: "Breakside", price: "4.50", alcoholContent: "4.5", quantity: 12, id:"10001" }],
       formVisibleOnPage: false,
       selectedKeg: null,
       editing: false
