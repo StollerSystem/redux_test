@@ -7,7 +7,9 @@ import PropTypes from "prop-types";
 function TapList(props) {
   return (
     <React.Fragment>
-      <h2>Tap List</h2>
+      <h2>Currently on Tap:</h2>
+      <p>(Click for deatils)</p>
+      <hr/>
       {props.availableKegs.map((keg) =>
 
         <Keg

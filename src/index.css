@@ -17,15 +17,20 @@ code {
 .header,h1 {
   text-align: center;
   font-size: 300%;
-  text-shadow: 4px 4px antiquewhite;
-  
+  text-shadow: 4px 4px antiquewhite;  
 }
 
 .mainBox {
   background-color: antiquewhite;
   border: solid black;
   padding: 20px;
+}
 
+.keg {
+  border: solid rgb(249, 187, 105);
+  border-width: 1px;
+  padding: 20px;
+  margin: 5px;
 }
 
 
