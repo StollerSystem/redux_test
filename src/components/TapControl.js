@@ -16,10 +16,10 @@ class TapControl extends React.Component {
   }
 
   handleClickForm = () => {
-    if (this.state.selectedProduct != null){
+    if (this.state.selectedKeg != null){
       this.setState({
         formVisibleOnPage: false,
-        selectedProduct: null,
+        selectedKeg: null,
         editing: false
       });
     } else {
@@ -54,7 +54,17 @@ class TapControl extends React.Component {
     let buttonText = null;
 
 
-    if (this.state.formVisibleOnPage) {
+    if (this.state.selectedKeg != null) {
+      currentVisibleState = <KegDetail 
+      keg = {this.state.selectedKeg} 
+      // onClickingDelete = {this.handleDeletingProduct}
+      // onClickingEdit = {this.handleEditClick} 
+      />
+      buttonText = "Return to Tap List";
+    }
+
+
+    else if (this.state.formVisibleOnPage) {
       currentVisibleState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />;
       buttonText = "Return to Tap List"
     } else {
