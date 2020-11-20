@@ -15,6 +15,9 @@ function TapList(props) {
         brand={keg.brand}
         price={keg.price}
         alcoholContent={keg.alcoholContent}
+        quantity={keg.quantity}
+        id={keg.id}
+        onKegSelection={props.onKegSelection}
         />
 
       )}
@@ -27,7 +30,8 @@ function TapList(props) {
 }
 
 TapList.propTypes = {
-  availableKegs: PropTypes.array
+  availableKegs: PropTypes.array,
+  onKegSelection: PropTypes.func //dont need?
   
 };
 

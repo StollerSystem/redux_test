@@ -1,15 +1,16 @@
 import React from 'react';
 import TapList from "./TapList.js"
 import NewKegForm from "./NewKegForm.js"
+import KegDetail from "./KegDetails.js"
 
 
 class TapControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterTapList: [{name: "Pilsner", brand: "Breakside", price: 4, alcoholContent: 4.5 }],
+      masterTapList: [{name: "Pilsner", brand: "Breakside", price: 4, alcoholContent: 4.5, quantity: 124, id:10001 }],
       formVisibleOnPage: false,
-      selectedProduct: null,
+      selectedKeg: null,
       editing: false
     }
   }
@@ -35,6 +36,13 @@ class TapControl extends React.Component {
       formVisibleOnPage: false });
   }
 
+  handleChangingSelectedKeg = (id) => {   
+    console.log(id);
+    const newSelectedKeg = this.state.masterTapList.filter(keg => keg.id === id)[0];  
+    this.setState({selectedKeg: newSelectedKeg});
+  }
+
+
 
 
 
@@ -52,7 +60,10 @@ class TapControl extends React.Component {
     } else {
 
     currentVisibleState = <TapList 
-      availableKegs={this.state.masterTapList}/>
+      availableKegs={this.state.masterTapList}
+      onKegSelection={this.handleChangingSelectedKeg}
+      />
+      
     buttonText = "Add New Keg"
     }
 
