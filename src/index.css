@@ -76,4 +76,17 @@ img {
 width: 15%
 }
 
+button {
+  margin: 3px;
+}
+
+.black {
+  color: black;
+  text-shadow: 1px 1px white;  
+}
+
+.green {
+  color: rgb(91, 165, 17);
+}
+
 

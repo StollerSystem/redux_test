@@ -30,7 +30,7 @@ function EditKegForm(props) {
             className="form-control"
               type='text'
               name='name'
-              defaultvalue={props.keg.name} required /><br/>
+              placeholder={props.keg.name} required /><br/>
             <label for="brand">Brand:</label>
             <input
             className="form-control"

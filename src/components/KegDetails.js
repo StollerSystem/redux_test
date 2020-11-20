@@ -6,7 +6,7 @@ function KegDetail(props){
   
   return (
     <React.Fragment>
-      <h1>Keg Details</h1>
+      <h1 className="black">Keg Details</h1>
       <hr/>
       <h2>Name: {keg.name}</h2>
       <h4>Brand: {keg.brand}</h4>

@@ -13,10 +13,10 @@ function Keg(props){
 
   return (    
     <div className="keg">          
-      <h3>{props.brand} - {props.name} {alert}</h3>
-      <h4>${props.price}/Pint </h4>
-      <h5>{props.alcoholContent}%ALC</h5>     
-      <p>Quantity (approx pint Pours left): {props.quantity}</p>        
+      <h4>{props.brand} - {props.name} - {props.alcoholContent}%ALC - <span className="green">${props.price}/Pint</span>  {alert}</h4>
+      <h4></h4>
+      <h5></h5>     
+      <p>Quantity (approx pint Pours left): <span className="redAlert">{props.quantity}</span></p>        
       <button className="btn btn-outline-info btn-sm" onClick = {() => props.onPourPint(props.id)}>Pour a pint!</button>
       <button className="btn btn-outline-info btn-sm" onClick = {() => props.onKegSelection(props.id)}>Details</button>
     </div>    
