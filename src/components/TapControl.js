@@ -58,19 +58,16 @@ class TapControl extends React.Component {
       formVisibleOnPage: false });
   }
 
-  handleEditClick = () => {
-    console.log("handleEditClick reached!");
+  handleEditClick = () => {    
     this.setState({editing: true});
   }
 
-  handleEditingKegInList = (kegToEdit) => {
-    const editedMasterTapList = this.state.masterKegList
-    .filter(Keg => Keg.id !== this.state.selectedKeg.id)
-    .concat(kegToEdit);
+  handleEditingKegInList = (kegToEdit) => {    
+    const editedMasterTapList = this.state.masterTapList.filter(Keg => Keg.id !== this.state.selectedKeg.id).concat(kegToEdit);    
   this.setState({
       masterTapList: editedMasterTapList,
       editing: false,
-      selectedTicket: null
+      selectedKeg: null
     });
 }
 
