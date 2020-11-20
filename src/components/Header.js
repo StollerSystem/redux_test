@@ -4,9 +4,9 @@ function Header() {
   return (    
     <React.Fragment>
       <br/><br/>
-      <div className="container header">
+      <div className="container header hero-image">
         {/* <img src={ship}/> */}
-        <img src={require('./ClipartKey_1391822.png')} />
+        <img src={require('./ClipartKey_1391822B.png')} />
         <h1>VIKING SHIP TAP HALL</h1>
         <p>(Wimps and posers: leave the hall)</p>
       </div>
