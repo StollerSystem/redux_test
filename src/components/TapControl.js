@@ -85,11 +85,12 @@ class TapControl extends React.Component {
   render() {
     let currentVisibleState = null;
     let buttonText = null;
+    // EDIT
     if (this.state.editing){
-      currentVisibleState = <EditKegForm product = {this.state.selectedKeg} onEditProduct = {this.handleEditingKegInList} />
+      currentVisibleState = <EditKegForm keg = {this.state.selectedKeg} onEditProduct = {this.handleEditingKegInList} />
       buttonText = "Return to Tap List";
     }
-
+    // DETAILS
     else if (this.state.selectedKeg != null) {
       currentVisibleState = <KegDetail 
       keg = {this.state.selectedKeg} 
@@ -98,10 +99,12 @@ class TapControl extends React.Component {
       />
       buttonText = "Return to Tap List";
     }
+    // NEW KEG
     else if (this.state.formVisibleOnPage) {
       currentVisibleState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />;
       buttonText = "Return to Tap List"
     } else {
+      //TAP LIST
     currentVisibleState = <TapList 
       availableKegs={this.state.masterTapList}
       onKegSelection={this.handleChangingSelectedKeg}

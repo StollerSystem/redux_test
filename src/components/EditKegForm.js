@@ -19,15 +19,52 @@ function EditKegForm(props) {
   
   return (
     <React.Fragment>
-      <ReusableForm
+      {/* <ReusableForm
         formSubmissionHandler={handleEditKegFormSubmission}
-        buttonText="Update Keg" />
+        buttonText="Update Keg" /> */}
+
+        <form onSubmit={handleEditKegFormSubmission}>
+          <div className="form-group">
+            <label for="name">Name:</label>
+            <input
+            className="form-control"
+              type='text'
+              name='name'
+              defaultvalue={props.keg.name} required /><br/>
+            <label for="brand">Brand:</label>
+            <input
+            className="form-control"
+              type='text'
+              name='brand'
+              placeholder={props.keg.brand} required /><br/>
+            <label for="price">Price:</label>
+            <input
+            className="form-control"
+              type="number"
+              name='price'
+              placeholder={props.keg.price} min="0.01" step="0.01" required /><br/>
+            <label for="alcoholContent">Alcohol Content:</label>
+            <input
+            className="form-control"
+              type="number"
+              name='alcoholContent'
+              placeholder={props.keg.alcoholContent} min="0.01" step="0.01" required/><br/>
+            <label for="quantity">Quantity:</label>
+            <input
+            className="form-control"
+              type="number"
+              name='quantity'
+              placeholder={props.keg.quantity} min="1" step="1" max="124" required/><br/>
+          <button className="btn btn-outline-danger btn-block" type='submit'>Update Keg</button>
+        </div>
+      </form>
     </React.Fragment>
   );
 }
 
 EditKegForm.propTypes = {
-  onEditProduct: PropTypes.func
+  onEditProduct: PropTypes.func,
+  keg: PropTypes.objectOf
 };
 
 export default EditKegForm;
