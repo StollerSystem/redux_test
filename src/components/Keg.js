@@ -9,7 +9,7 @@ function Keg(props){
         <h4>{props.name}</h4>
         <p>{props.brand}</p>
         <p>${props.price}</p>
-        <p>Alcohol content: {props.alcoholContent}</p>
+        <p>Alcohol content: {props.alcoholContent}%</p>
         <p>Quantity: {props.quantity}</p>
       </div>
       <button className="btn btn-outline-light btn-sm" onClick = {() => props.onPourPint(props.id)}>Pour a pint!</button>
@@ -21,10 +21,10 @@ function Keg(props){
 Keg.propTypes = {
   name: PropTypes.string.isRequired,
   brand: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
-  alcoholContent: PropTypes.number.isRequired,
+  price: PropTypes.string.isRequired,
+  alcoholContent: PropTypes.string.isRequired,
   quantity: PropTypes.number,
-  id: PropTypes.number,
+  id: PropTypes.string,
   onKegSelection: PropTypes.func,
   onPourPint: PropTypes.func
 }

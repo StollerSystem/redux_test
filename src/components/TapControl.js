@@ -9,7 +9,7 @@ class TapControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterTapList: [{name: "Pilsner", brand: "Breakside", price: 4, alcoholContent: 4.5, quantity: 5, id:10001 }],
+      masterTapList: [{name: "Pilsner", brand: "Breakside", price: "4.50", alcoholContent: "4.5", quantity: 5, id:"10001" }],
       formVisibleOnPage: false,
       selectedKeg: null,
       editing: false
@@ -37,8 +37,7 @@ class TapControl extends React.Component {
       formVisibleOnPage: false });
   }
 
-  handleChangingSelectedKeg = (id) => {   
-    console.log(id);
+  handleChangingSelectedKeg = (id) => {       
     const newSelectedKeg = this.state.masterTapList.filter(keg => keg.id === id)[0];  
     this.setState({selectedKeg: newSelectedKeg});
   }
@@ -71,9 +70,13 @@ class TapControl extends React.Component {
     });
 }
 
-  
-
-
+handleDeletingTicket = (id) => {
+  const newMasterTapList = this.state.masterTapList.filter(Tap => Tap.id !== id);
+  this.setState({
+    masterTapList: newMasterTapList,
+    selectedTicket: null
+  });
+}
 
 
 
@@ -92,7 +95,7 @@ class TapControl extends React.Component {
     else if (this.state.selectedKeg != null) {
       currentVisibleState = <KegDetail 
       keg = {this.state.selectedKeg} 
-      // onClickingDelete = {this.handleDeletingProduct}
+      onClickingDelete = {this.handleDeletingProduct}
       onClickingEdit = {this.handleEditClick} 
       />
       buttonText = "Return to Tap List";
