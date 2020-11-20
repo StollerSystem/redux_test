@@ -42,6 +42,19 @@ class TapControl extends React.Component {
     this.setState({selectedKeg: newSelectedKeg});
   }
 
+  handlePourPint = (id) => {
+    const newMasterTapList = this.state.masterTapList;
+    for (const keg of newMasterTapList) {
+      if (keg.id === id) {
+        keg.quantity -= 1;
+        break;
+      }
+    }
+    this.setState({
+      masterTapList: newMasterTapList,
+      formVisibleOnPage: false });
+  }
+  
 
 
 
@@ -62,18 +75,15 @@ class TapControl extends React.Component {
       />
       buttonText = "Return to Tap List";
     }
-
-
     else if (this.state.formVisibleOnPage) {
       currentVisibleState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />;
       buttonText = "Return to Tap List"
     } else {
-
     currentVisibleState = <TapList 
       availableKegs={this.state.masterTapList}
       onKegSelection={this.handleChangingSelectedKeg}
-      />
-      
+      onPourPint={this.handlePourPint}
+      />      
     buttonText = "Add New Keg"
     }
 
@@ -83,18 +93,12 @@ class TapControl extends React.Component {
         <div className="container">
 
           {currentVisibleState}
+          <br/>
           <button className="arrow btn btn-outline-info btn-block" onClick={this.handleClickForm}>{buttonText}</button>
         </div>
       </React.Fragment>
-
     );
-    
-
-
   }
-
-
-
 }
 
 export default TapControl;

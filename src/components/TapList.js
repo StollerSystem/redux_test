@@ -18,6 +18,8 @@ function TapList(props) {
         quantity={keg.quantity}
         id={keg.id}
         onKegSelection={props.onKegSelection}
+        onPourPint={props.onPourPint}
+
         />
 
       )}
