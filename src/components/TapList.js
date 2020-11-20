@@ -8,8 +8,7 @@ function TapList(props) {
   return (
     <React.Fragment>
       <h2>Currently on Tap:</h2>
-      <p>(Click for deatils)</p>
-      <hr/>
+      <hr/>      
       {props.availableKegs.map((keg) =>
 
         <Keg

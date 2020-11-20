@@ -15,8 +15,8 @@ function KegDetail(props){
       <h4>Alcohol Content: {keg.alcoholContent} %ABU</h4>
       <h4>Quantity (Pint purs left): {keg.quantity}</h4>
       
-      <button className="btn btn-outline-info btn-block" onClick={() => onClickingDelete(keg.id) }>Delete This Keg</button>
       <button className="btn btn-outline-info btn-block" onClick={ props.onClickingEdit }>Edit This Keg</button>
+      <button className="btn btn-outline-danger btn-block" onClick={() => onClickingDelete(keg.id) }>Delete This Keg</button>
 
       <hr/>
     </React.Fragment>

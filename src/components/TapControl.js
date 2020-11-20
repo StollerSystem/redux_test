@@ -9,7 +9,7 @@ class TapControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterTapList: [{name: "Pilsner", brand: "Breakside", price: "4.50", alcoholContent: "4.5", quantity: 12, id:"10001" }],
+      masterTapList: [{name: "Pilsner", brand: "Breakside", price: "4.50", alcoholContent: "4.5", quantity: "12", id:"10001" }],
       formVisibleOnPage: false,
       selectedKeg: null,
       editing: false
@@ -48,6 +48,9 @@ class TapControl extends React.Component {
       if (keg.id === id) {
         if (keg.quantity > 0) {
           keg.quantity -= 1;
+          keg.quantity = keg.quantity.toString();
+        } else if (keg.quantity <= 0) {
+          alert("YYYAARRRGGG! The Keg is Empty!")
         }
         break;
       }
