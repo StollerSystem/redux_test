@@ -63,14 +63,16 @@ class TapControl extends React.Component {
     this.setState({editing: true});
   }
 
-  handleEditingKegInList = (productToEdit) => {
-    
-    // this.setState({
-    //   masterProductList: clone,
-    //   editing: false,
-    //   selectedProduct: null
-    // });
-  }
+  handleEditingKegInList = (kegToEdit) => {
+    const editedMasterTapList = this.state.masterKegList
+    .filter(Keg => Keg.id !== this.state.selectedKeg.id)
+    .concat(kegToEdit);
+  this.setState({
+      masterTapList: editedMasterTapList,
+      editing: false,
+      selectedTicket: null
+    });
+}
 
   
 

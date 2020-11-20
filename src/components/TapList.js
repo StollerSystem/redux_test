@@ -17,6 +17,7 @@ function TapList(props) {
         alcoholContent={keg.alcoholContent}
         quantity={keg.quantity}
         id={keg.id}
+        key={keg.id}
         onKegSelection={props.onKegSelection}
         onPourPint={props.onPourPint}
 
