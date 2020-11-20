@@ -1,12 +1,16 @@
 body {
   margin: 0;
-  
+  height: 100%;
   font-family: 'Germania One', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url("https://blog-assets.busbud.com/wp-content/uploads/2019/11/Sunnylvsfjorden-fjord-canyon.png");
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
+}
+
+html {
+  height: 100%;
 }
 
 code {
@@ -17,13 +21,17 @@ code {
 .header,h1 {
   text-align: center;
   font-size: 250%;
-  text-shadow: 4px 4px antiquewhite;  
+  text-shadow: 4px 4px antiquewhite;    
 }
 
 .mainBox {
+  height: 700px;
   background-color: antiquewhite;
   border: solid black;
+  border-width: 3px;
   padding: 20px;
+  overflow-y: scroll;
+  margin-bottom: 30px;
 }
 
 .keg {
@@ -35,6 +43,10 @@ code {
 
 .redAlert {
   color: red;
+}
+
+img {
+width: 15%
 }
 
 

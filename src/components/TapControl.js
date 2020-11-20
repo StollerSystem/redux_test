@@ -9,7 +9,7 @@ class TapControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterTapList: [{name: "Pilsner", brand: "Breakside", price: "4.50", alcoholContent: "4.5", quantity: "12", id:"10001" }],
+      masterTapList: [{name: "Viking Mead", brand: "Skull Crusher", price: "4.50", alcoholContent: "8.5", quantity: "10", id:"10001" }, {name: "Dansk Blod", brand: "Einstök", price: "5.50", alcoholContent: "6.5", quantity: "0", id:"10002" }, {name: "Savage Pilsner", brand: "Ragnar", price: "3.50", alcoholContent: "3.5", quantity: "124", id:"10003" }],
       formVisibleOnPage: false,
       selectedKeg: null,
       editing: false
@@ -50,7 +50,7 @@ class TapControl extends React.Component {
           keg.quantity -= 1;
           keg.quantity = keg.quantity.toString();
         } else if (keg.quantity <= 0) {
-          alert("YYYAARRRGGG! The Keg is Empty!")
+          alert("YYYAARRRGGG! Thy Keg is Empty!")
         }
         break;
       }
@@ -113,14 +113,12 @@ class TapControl extends React.Component {
     }
 
 
-    return (
-      <React.Fragment>
-        <div className="container mainBox">
-          {currentVisibleState}
-          <br/>
-          <button className="arrow btn btn-outline-info btn-block" onClick={this.handleClickForm}>{buttonText}</button>
-        </div>
-      </React.Fragment>
+    return (      
+      <div className="container mainBox">
+        {currentVisibleState}
+        <br/>
+        <button className="arrow btn btn-outline-info btn-block" onClick={this.handleClickForm}>{buttonText}</button>
+      </div>
     );
   }
 }

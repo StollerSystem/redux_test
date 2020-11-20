@@ -7,7 +7,7 @@ function Keg(props){
   let alert = null
   if (props.quantity <= 0) {
     alert = <span className="redAlert">Out of stock</span>
-  } else if (props.quantity < 10) {
+  } else if (props.quantity <= 10) {
     alert = <span className="redAlert">Almost Empty</span>
   }
 
@@ -15,10 +15,10 @@ function Keg(props){
       <div className="keg">
         {/* <div onClick = {() => props.onKegSelection(props.id)}> */}
           
-          <h3>{props.brand} {props.name} {alert}</h3>
+          <h3>{props.brand} - {props.name} {alert}</h3>
           <h4>${props.price}/Pint </h4>
           <h5>{props.alcoholContent}%ALC</h5>     
-          <p>Quantity (Pint Pours): {props.quantity}</p>
+          <p>Quantity (approx pint Pours left): {props.quantity}</p>
         {/* </div> */}
         <button className="btn btn-outline-info btn-sm" onClick = {() => props.onPourPint(props.id)}>Pour a pint!</button>
         <button className="btn btn-outline-info btn-sm" onClick = {() => props.onKegSelection(props.id)}>Details</button>
