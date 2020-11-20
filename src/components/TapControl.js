@@ -112,8 +112,7 @@ class TapControl extends React.Component {
 
     return (
       <React.Fragment>
-        <div className="container">
-
+        <div className="container mainBox">
           {currentVisibleState}
           <br/>
           <button className="arrow btn btn-outline-info btn-block" onClick={this.handleClickForm}>{buttonText}</button>
