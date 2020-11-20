@@ -7,13 +7,9 @@ import ReusableForm from "./ReusableForm";
 function NewProductForm(props) {
 
   function handleNewProductFormSubmission(event){
-    event.preventDefault();
-    
+    event.preventDefault();    
     const price = parseInt(event.target.price.value).toFixed(2);
-
-
-    props.onNewKegCreation({name: event.target.name.value, brand: event.target.brand.value, price: price, alcoholContent: event.target.alcoholContent.value, quantity: event.target.quantity.value, id: v4() })
-  }  
+    props.onNewKegCreation({name: event.target.name.value, brand: event.target.brand.value, price: price, alcoholContent: event.target.alcoholContent.value, quantity: event.target.quantity.value, id: v4() })  }  
   
   return (
     <React.Fragment>

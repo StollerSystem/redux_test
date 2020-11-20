@@ -2,8 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function KegDetail(props){
-  const { keg, onClickingDelete} = props;
-  // const { keg } = props;
+  const { keg, onClickingDelete} = props;  
   
   return (
     <React.Fragment>
@@ -13,11 +12,9 @@ function KegDetail(props){
       <h4>Brand: {keg.brand}</h4>
       <h4>Price/Pint: ${keg.price}</h4>
       <h4>Alcohol Content: {keg.alcoholContent} %ABU</h4>
-      <h4>Quantity (Pint purs left): {keg.quantity}</h4>
-      
+      <h4>Quantity (Pint purs left): {keg.quantity}</h4>      
       <button className="btn btn-outline-info btn-block" onClick={ props.onClickingEdit }>Edit This Keg</button>
       <button className="btn btn-outline-danger btn-block" onClick={() => onClickingDelete(keg.id) }>Delete This Keg</button>
-
       <hr/>
     </React.Fragment>
   );

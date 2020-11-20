@@ -4,7 +4,7 @@
 
 #### By _**Ben Stoller**_
 
-## Description
+## Description:
 
 This app will let you keep track of all the drink you have on tap. The page displays a master list of drinks on tap - each listing displays basic information and has two buttons: 
 (Pour drink) - click this when you pour a pint to reduce the quantity, when you get to 10 or below it will display an alert warning you its low and when quantity hits 0 it will alert you.
@@ -22,7 +22,7 @@ Than will take you to a form where you can fill in all the details and ass a new
 * As a user, I want to be able to click a button next to a keg whenever I sell a pint of it. This should decrease the number of pints left by 1.
 * Pints should not be able to go below 0.
 
-### Further Exploration Complete
+### Further Exploration CompleteD:
 
 * As a user, I want the option to edit a keg's properties after entering them just in case I make a mistake.
 * As a user, I want to be able to delete a keg.
@@ -30,29 +30,29 @@ Than will take you to a form where you can fill in all the details and ass a new
 * As a user, I want kegs with less than 10 pints to include a message that says "Almost Empty" so I can try a pint before it's gone!
 * As a user, I want this application to be nicely styled
 
-## Component Diagram
+## Component Diagram:
 
 ![Alt text](./TapRoomDiagram.png?raw=true "Diagram")
 
-## Setup/Installation Requirements
+## Setup/Installation Requirements:
 
 * Clone this repo to your machine
 * Navigate to the main project directory and run "npm install" to install all dependancies. 
 * Run "npm start" to run the app in your browser 
 
-## Known Bugs
+## Known Bugs:
 
 
 
-## Support and contact details
+## Support and contact details:
 
 https://github.com/StollerSystem
 
-## Technologies Used
+## Technologies Used:
 
 JavaScript, Node.Js, React, CSS/Bootstrap, Webpack, HTML5, VSCode
 
-### License
+### License:
 
 MIT
 

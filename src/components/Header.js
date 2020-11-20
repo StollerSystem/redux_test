@@ -1,6 +1,4 @@
 import React from "react";
-// import ship from "./ClipartKey_1391822.png/"
-
 
 function Header() {
   return (    

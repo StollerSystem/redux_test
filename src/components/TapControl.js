@@ -85,8 +85,6 @@ class TapControl extends React.Component {
   render() {
     let currentVisibleState = null;
     let buttonText = null;
-
-
     if (this.state.editing){
       currentVisibleState = <EditKegForm product = {this.state.selectedKeg} onEditProduct = {this.handleEditingKegInList} />
       buttonText = "Return to Tap List";
@@ -111,7 +109,6 @@ class TapControl extends React.Component {
       />      
     buttonText = "Add New Keg"
     }
-
 
     return (      
       <div className="container mainBox">
