@@ -11,22 +11,22 @@ function NewProductForm(props) {
         className="form-control"
           type='text'
           name='name'
-          placeholder='Name' /><br/>
+          placeholder='Name' required /><br/>
         <input
         className="form-control"
           type='text'
           name='brand'
-          placeholder='Brand' /><br/>
+          placeholder='Brand' required /><br/>
         <input
         className="form-control"
           type="number"
           name='price'
-          placeholder='Price' /><br/>
+          placeholder='Price' min="0.01" step="0.01" required /><br/>
         <input
         className="form-control"
           type="number"
           name='alcoholContent'
-          placeholder='Alcohol Content' /><br/>
+          placeholder='Alcohol Content' min="0.01" step="0.01" required/><br/>
           
         
 
