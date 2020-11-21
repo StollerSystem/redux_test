@@ -1,13 +1,13 @@
 # _Viking Ship Tap Hall_
 
-#### _An app to keep track of drinks on tap, 11/20/20_
+#### _An app to keep track of kegs on tap, 11/20/20_
 
 #### By _**Ben Stoller**_
 
 ## Description:
 
 This app will let you keep track of all the kegs you have on tap. The page displays a master list of kegs, each listing displays basic information and has two buttons: 
-(Pour drink) - click this when you pour a pint to reduce the quantity, when you get to 10 or below it will display an alert warning you its low and when quantity hits 0 it will alert you.
+(Pour pint) - click this when you pour a pint to reduce the quantity, when you get to 10 or below it will display an alert warning you its low and when quantity hits 0 it will alert you.
 (Detail) - Will take you to a view displaying the details for a particular beverage. From there you have two more buttons: (Edit) and (Delete).
 Delete will delete the keg from the list and Edit will take you to a new view Form where you can edit all the details. 
 At the bottom of the List there is a button to add a Keg to the list. 
@@ -22,7 +22,7 @@ Then will take you to a form where you can fill in all the details and add a new
 * As a user, I want to be able to click a button next to a keg whenever I sell a pint of it. This should decrease the number of pints left by 1.
 * Pints should not be able to go below 0.
 
-### Further Exploration CompleteD:
+### Further Exploration:
 
 * As a user, I want the option to edit a keg's properties after entering them just in case I make a mistake.
 * As a user, I want to be able to delete a keg.
