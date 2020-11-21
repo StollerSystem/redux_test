@@ -7,10 +7,9 @@ import PropTypes from "prop-types";
 function TapList(props) {
   return (
     <React.Fragment>
-      <h2>Currently on Tap:</h2>
+      <h2 className="tapList">- Tap List -</h2>
       <hr/>      
       {props.availableKegs.map((keg) =>
-
         <Keg
         name={keg.name}
         brand={keg.brand}
@@ -20,15 +19,8 @@ function TapList(props) {
         id={keg.id}
         key={keg.id}
         onKegSelection={props.onKegSelection}
-        onPourPint={props.onPourPint}
-
-        />
-
+        onPourPint={props.onPourPint}/>
       )}
-
-
-      
-
     </React.Fragment>
   )
 }
