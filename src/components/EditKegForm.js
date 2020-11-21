@@ -1,5 +1,4 @@
 import React from "react";
-import ReusableForm from "./ReusableForm";
 import PropTypes from "prop-types";
 import { v4 } from "uuid";
 
@@ -19,37 +18,33 @@ function EditKegForm(props) {
   
   return (
     <React.Fragment>
-      {/* <ReusableForm
-        formSubmissionHandler={handleEditKegFormSubmission}
-        buttonText="Update Keg" /> */}
-
         <form onSubmit={handleEditKegFormSubmission}>
           <div className="form-group">
-            <label for="name">Name:</label>
+            <label htmlFor="name">Name:</label>
             <input
             className="form-control"
               type='text'
               name='name'
               placeholder={props.keg.name} required /><br/>
-            <label for="brand">Brand:</label>
+            <label htmlFor="brand">Brand:</label>
             <input
             className="form-control"
               type='text'
               name='brand'
               placeholder={props.keg.brand} required /><br/>
-            <label for="price">Price:</label>
+            <label htmlFor="price">Price:</label>
             <input
             className="form-control"
               type="number"
               name='price'
               placeholder={props.keg.price} min="0.01" step="0.01" required /><br/>
-            <label for="alcoholContent">Alcohol Content:</label>
+            <label htmlFor="alcoholContent">Alcohol Content:</label>
             <input
             className="form-control"
               type="number"
               name='alcoholContent'
               placeholder={props.keg.alcoholContent} min="0.01" step="0.01" required/><br/>
-            <label for="quantity">Quantity:</label>
+            <label htmlFor="quantity">Quantity:</label>
             <input
             className="form-control"
               type="number"
@@ -64,7 +59,7 @@ function EditKegForm(props) {
 
 EditKegForm.propTypes = {
   onEditProduct: PropTypes.func,
-  keg: PropTypes.objectOf
+  keg: PropTypes.object
 };
 
 export default EditKegForm;

@@ -3,10 +3,7 @@ body {
   height: 100%;
   font-family: 'Germania One', cursive;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* background-image: url("https://blog-assets.busbud.com/wp-content/uploads/2019/11/Sunnylvsfjorden-fjord-canyon.png"); */
-  /* background-repeat: no-repeat; /* Do not repeat the image */
-  /* background-size: cover;  */
+  -moz-osx-font-smoothing: grayscale;  
   background-color: rgb(9, 9, 9);
 }
 
@@ -25,27 +22,18 @@ code {
   font-size: 250%;
   text-shadow: 2px 2px black;  
 }
-
-
-  /* background-image: url("https://blog-assets.busbud.com/wp-content/uploads/2019/11/Sunnylvsfjorden-fjord-canyon.png"); */
-.hero-image {
-    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-
-
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://blog-assets.busbud.com/wp-content/uploads/2019/11/Sunnylvsfjorden-fjord-canyon.png");
   
-    /* Set a specific height */
-    height: 100%;
-    margin-top: 0px;
-    /* Position and center the image to scale nicely on all screens */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    border: solid rgb(249, 187, 105);
-    border-width: 3px;
-    margin-bottom: 10px;
-
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://blog-assets.busbud.com/wp-content/uploads/2019/11/Sunnylvsfjorden-fjord-canyon.png");  
+  height: 100%;
+  margin-top: 0px;  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border: solid rgb(249, 187, 105);
+  border-width: 3px;
+  margin-bottom: 10px;
 }
   
 
@@ -66,6 +54,7 @@ code {
   border-width: 1px;
   padding: 20px;
   margin: 5px;
+  box-shadow: 2px 2px 2px 2px rgb(143, 143, 143) ;
 }
 
 .redAlert {
@@ -73,7 +62,7 @@ code {
 }
 
 img {
-width: 15%
+  width: 15%
 }
 
 button {
