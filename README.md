@@ -6,12 +6,12 @@
 
 ## Description:
 
-This app will let you keep track of all the drink you have on tap. The page displays a master list of drinks on tap - each listing displays basic information and has two buttons: 
+This app will let you keep track of all the beverages you have on tap. The page displays a master list of drinks on tap - each listing displays basic information and has two buttons: 
 (Pour drink) - click this when you pour a pint to reduce the quantity, when you get to 10 or below it will display an alert warning you its low and when quantity hits 0 it will alert you.
 (Detail) - Will take you to a view displaying the details for a particular beverage. From there you have two more buttons: Edit and Delete.
-Delete will delete the drink from the list and Edit will take you to a new view Form where you can edit all the detials. 
+Delete will delete the drink from the list and Edit will take you to a new view Form where you can edit all the details. 
 At the bottom of the List there is a button to add a Keg to the list. 
-Than will take you to a form where you can fill in all the details and ass a new keg! Yaaarg!
+Then will take you to a form where you can fill in all the details and add a new keg! Yaaarg!
 
 ### Here are some user stories:
 
@@ -37,7 +37,7 @@ Than will take you to a form where you can fill in all the details and ass a new
 ## Setup/Installation Requirements:
 
 * Clone this repo to your machine
-* Navigate to the main project directory and run "npm install" to install all dependancies. 
+* Navigate to the main project directory and run "npm install" to install all dependencies. 
 * Run "npm start" to run the app in your browser 
 
 ## Known Bugs:

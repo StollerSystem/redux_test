@@ -8,7 +8,7 @@ function Header() {
         {/* <img src={ship}/> */}
         <img src={require('./ClipartKey_1391822B.png')} />
         <h1>VIKING SHIP TAP HALL</h1>
-        <p>(Wimps and posers: leave the hall)</p>
+        <p>(Wimps and Posers: leave the hall)</p>
       </div>
     </React.Fragment>
   );
