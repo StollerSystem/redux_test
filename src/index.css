@@ -46,7 +46,7 @@ code {
   padding: 20px;
   overflow-y: scroll;
   margin-bottom: 30px;
-  opacity: 95%;
+  /* opacity: 95%; */
 }
 
 .keg {

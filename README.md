@@ -4,6 +4,8 @@
 
 #### By _**Ben Stoller**_
 
+##### Check it out: http://StollerSystem.github.io/Tap_Room
+
 ## Description:
 
 This app will let you keep track of all the kegs you have on tap. The page displays a master list of kegs, each listing displays basic information and has two buttons: 
@@ -15,7 +17,7 @@ Then will take you to a form where you can fill in all the details and add a new
 
 ### Here are some user stories:
 
-* As a user, I want to see a list/menu of all available kegs. For each keg, * I want to see its name, brand, price and alcoholContent (or perhaps something like flavor for a kombucha store).
+* As a user, I want to see a list/menu of all available kegs. For each keg, I want to see its name, brand, price and alcoholContent (or perhaps something like flavor for a kombucha store).
 * As a user, I want to submit a form to add a new keg to a list.
 * As a user, I want to be able to click on a keg to see its detail page.
 * As a user, I want to see how many pints are left in a keg. A full keg has roughly 124 pints.
